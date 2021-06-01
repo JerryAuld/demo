@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 print("Running the Ashboarday Updater in python.")
 
