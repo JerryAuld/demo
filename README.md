@@ -1,3 +1,5 @@
+[![Ashboarday-Updater](https://github.com/JerryAuld/ashboarday/actions/workflows/test1.yml/badge.svg)](https://github.com/JerryAuld/ashboarday/actions/workflows/test1.yml)
+
 # ashboarday
 Example repo for ashboarday agents.
 
