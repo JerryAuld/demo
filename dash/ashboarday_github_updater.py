@@ -43,6 +43,7 @@ def getLatestDate(folder):
 print("Python :: Running the Ashboarday Updater.")
 
 # Get our guidance file:
+print(os.getcwd())
 if os.path.exists('dash/ashboarday.u.json'):
   
   with open('dash/ashboarday.u.json') as f:
@@ -53,7 +54,7 @@ if os.path.exists('dash/ashboarday.u.json'):
   nodes = jsondata['Nodes']
   
   for node in nodes:
-    result = getLatestDate(nodes['Scrape'])
+    result = getLatestDate(node['Scrape'])
     print("For Node "+node['NID']+" :: Latest date: "+result[0]+". File count: "+str(result[1])+". Folder size: "+str(result[2]))
   
   f.close
