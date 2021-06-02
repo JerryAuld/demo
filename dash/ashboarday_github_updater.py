@@ -10,7 +10,7 @@
 #
 #-------------------------------------------------------
 
-importy pathlib
+import pathlib
 import os
 import datetime
 
