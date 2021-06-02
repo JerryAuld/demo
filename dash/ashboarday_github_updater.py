@@ -42,7 +42,7 @@ def getLatestDate(folder):
 print("Python :: Running the Ashboarday Updater.")
 
 result = getLatestDate('sub1/')
-print("Latest date: "+result[0]+". File count: "+result[1]+". Folder size: "+result[2])
+print("Latest date: "+result[0]+". File count: "+str(result[1])+". Folder size: "+str(result[2]))
 
 # All subdirectories in the current directory, not recursive.
 # [f for f in p.iterdir() if f.is_dir()]
