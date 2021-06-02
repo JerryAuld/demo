@@ -33,7 +33,9 @@ jobs:
         run: echo Starting the Ashboarday Update
         
       - name: execute py script
-        run: python dash/ashboarday_github_updater.py
+        env:  
+          ash_path: 'dash/'
+        run: python ashboarday_github_updater.py
           
       - name: report status
         run: echo "This job's status is ${{ job.status }}."
