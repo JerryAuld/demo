@@ -12,7 +12,8 @@
 
 import pathlib
 import os
-import datetime
+from datetime import datetime
+from datetime import date
 
 #---------------  FUNCTIONS  ---------------------------
 
