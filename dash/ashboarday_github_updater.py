@@ -43,7 +43,7 @@ def getLatestDate(folder):
 print("Python :: Running the Ashboarday Updater.")
 
 # Get our guidance file:
-if exists('ashboarday.u.json'):
+if os.path.exists('ashboarday.u.json'):
   
   with open('ashboarday.u.json') as f:
     jsondata = json.load(f)
