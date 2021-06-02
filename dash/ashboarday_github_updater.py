@@ -10,9 +10,9 @@
 #
 #-------------------------------------------------------
 
-from pathlib import Path
+importy pathlib
 import os
-from datetime import date
+import datetime
 
 #---------------  FUNCTIONS  ---------------------------
 
@@ -26,7 +26,7 @@ def getLatestDate(folder):
     fcount += 1
     # thisdate = os.path.getmtime(f)
     (mode, ino, dev, nlink, uid, gid, size, atime, mtime, ctime) = os.stat(f)
-    thisdate = mtime
+    thisdate = datetime.datetime.fromtimestamp(mtime)
     fsize += size
     if thisdate < latedate:
       latedate = thisdate
