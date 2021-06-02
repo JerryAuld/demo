@@ -32,11 +32,8 @@ jobs:
       - name: Signal the start
         run: echo Starting the Ashboarday Update
         
-      - name: execute py script # run sj-gobierno.py to get the latest data
-        run: python test1.py
-        
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+      - name: execute py script
+        run: python dash/ashboarday_github_updater.py
           
-      - run: echo "This job's status is ${{ job.status }}."
+      - name: report status
+        run: echo "This job's status is ${{ job.status }}."
