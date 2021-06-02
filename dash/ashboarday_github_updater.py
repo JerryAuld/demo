@@ -12,14 +12,13 @@
 
 import pathlib
 import os
-from datetime import datetime
-from datetime import date
+import datetime from datetime
 
 #---------------  FUNCTIONS  ---------------------------
 
 def getLatestDate(folder):
   # returns the latest date found in the folder's files as an ISO date string.
-  latedate = date.today()
+  latedate = datetime.now()
   fcount = 0
   fsize = 0
   files = [ file.path for file in os.scandir(folder) if not file.is_dir() ]
@@ -27,7 +26,7 @@ def getLatestDate(folder):
     fcount += 1
     # thisdate = os.path.getmtime(f)
     (mode, ino, dev, nlink, uid, gid, size, atime, mtime, ctime) = os.stat(f)
-    thisdate = datetime.datetime.fromtimestamp(mtime)
+    thisdate = datetime.fromtimestamp(mtime)
     fsize += size
     if thisdate < latedate:
       latedate = thisdate
