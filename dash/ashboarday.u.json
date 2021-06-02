@@ -2,6 +2,6 @@
   "License": "20201116",
   "Target": "https://ashboarday.com/x/get_data.php",
   "Nodes": [
-	  { "NID": "123", "Scrape": "sub1/" }
+	  { "NID": "754", "Scrape": "sub1/" }
   ]
 }
