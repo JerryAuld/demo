@@ -40,14 +40,13 @@ def getLatestDate(folder):
 
 #-----------------  MAIN   -----------------------------
 
-
-print("Python :: Running the Ashboarday Updater.")
+ash_path = os.getenv('ASH_PATH')
+print("Python :: Running the Ashboarday Updater at "+ash_path+".")
 
 # Get our guidance file:
-print(os.getcwd())
-if os.path.exists('dash/ashboarday.u.json'):
+if os.path.exists(ash_path+'ashboarday.u.json'):
   
-  with open('dash/ashboarday.u.json') as f:
+  with open(ash_path+'ashboarday.u.json') as f:
     jsondata = json.load(f)
 
   license = jsondata['License']
