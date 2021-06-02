@@ -58,7 +58,7 @@ if os.path.exists('dash/ashboarday.u.json'):
     result = getLatestDate(node['Scrape'])
     print("For Node "+node['NID']+" :: Latest date: "+result[0]+". File count: "+str(result[1])+". Folder size: "+str(result[2]))
     dashreply = urllib.request.urlopen(dashapi+"?i=" + node["NID"] + "&d=" + result[0] + "&c=" + str(license)).read()
-    print("Dashboard response: "+dashreply)
+    print("Dashboard response: "+str(dashreply,'utf-8'))
   
   f.close
 else:
