@@ -31,7 +31,7 @@ def getLatestDate(folder):
     if thisdate < latedate:
       latedate = thisdate
       
-  if fcount = 0:
+  if fcount == 0:
     return "2009-01-01", fcount, fsize
   else:
     return latedate.strftime("%Y-%m-$d"), fcount, fsize
