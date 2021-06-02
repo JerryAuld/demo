@@ -13,6 +13,7 @@
 import pathlib
 import os
 from datetime import datetime
+import json
 
 #---------------  FUNCTIONS  ---------------------------
 
@@ -34,15 +35,30 @@ def getLatestDate(folder):
   if fcount == 0:
     return "2009-01-01", fcount, fsize
   else:
-    return latedate.strftime("%Y-%m-$d"), fcount, fsize
+    return latedate.strftime("%Y-%m-%d"), fcount, fsize
 
 #-----------------  MAIN   -----------------------------
 
 
 print("Python :: Running the Ashboarday Updater.")
 
-result = getLatestDate('sub1/')
-print("Latest date: "+result[0]+". File count: "+str(result[1])+". Folder size: "+str(result[2]))
+# Get our guidance file:
+if exists('ashboarday.u.json'):
+  
+  with open('ashboarday.u.json') as f:
+    jsondata = json.load(f)
+
+  license = jsondata['License']
+  dashapi = jsondata['Target']
+  nodes = jsondata['Nodes']
+  
+  for node in nodes:
+    result = getLatestDate(nodes['Scrape'])
+    print("For Node "+node['NID']+" :: Latest date: "+result[0]+". File count: "+str(result[1])+". Folder size: "+str(result[2]))
+  
+  f.close
+else:
+  print("ERROR: json guidance file is not found. Please place in the same folder as this script.")
 
 # All subdirectories in the current directory, not recursive.
 # [f for f in p.iterdir() if f.is_dir()]
