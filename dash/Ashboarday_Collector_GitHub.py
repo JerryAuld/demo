@@ -44,28 +44,24 @@ def getLatestDate(folder):
 	
 	
 def getFolderData(folder, parent, order, level):
-
-  if folder.is_dir():
 		
-    # Get the folder data:
-    result = getLatestDate(folder)
+  # Get the folder data:
+  result = getLatestDate(folder)
 		
-    # We must create this folder as a node on the dashboard before continuing, so we know the parent node ID for any children:
-    nID = urllib.request.urlopen(dashapi+"?p=" + parent + "&n=" + urllib.parse.quote_plus(folder) +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + order + "&k=" + result[3] + "&s=GitHub&d=" + urllib.parse.quote_plus(result[0]) + "&z=" + str(result[2]) + "&i=" + urllib.parse.quote_plus(folder)).read()
+  # We must create this folder as a node on the dashboard before continuing, so we know the parent node ID for any children:
+  nID = urllib.request.urlopen(dashapi+"?p=" + parent + "&n=" + urllib.parse.quote_plus(folder) +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + order + "&k=" + result[3] + "&s=GitHub&d=" + urllib.parse.quote_plus(result[0]) + "&z=" + str(result[2]) + "&i=" + urllib.parse.quote_plus(folder.name)).read()
 		
-    # If we are not at depth and up to our width, process the child folders of this folder:
-    subfolders = [ f.path for f in os.scandir(folder) if f.is_dir() ]
-    iOrder = 0
-    level += 1
-    if level < depth:
-      for f in subfolders:
-        if f.is_dir():
-          iOrder += 1
-          if iOrder <= width:
-            getFolderData(folder+"/"+f, nID, iOrder, level)
-            return true
-          else:
-            return false
+  # If we are not at depth and up to our width, process the child folders of this folder:
+  order = 0
+  level += 1
+  if level < depth:
+    for f in os.scandir(folder) if f.is_dir():
+      order += 1
+      if order <= width:
+        getFolderData(f, nID, order, level)
+        return true
+      else:
+        return false
 
 #-----------------  MAIN   -----------------------------
 
@@ -85,13 +81,10 @@ if os.path.exists('dash/ashboarday.c.json'):
   f.close
 	
   # Get all subdirectories in the current directory:
-  subfolders = [ f.path for f in os.scandir(root) if f.is_dir() ]
   iOrder = 0
-
-  for f in subfolders:
-    if f.is_dir():
-      iOrder += 1
-      getFolderData(root+"/"+f, 0, iOrder, 1)
+  for f in os.scandir(root) if f.is_dir():
+    iOrder += 1
+    getFolderData(f, 0, iOrder, 1)
       
   print("SUCCESS: processing complete.")
 
