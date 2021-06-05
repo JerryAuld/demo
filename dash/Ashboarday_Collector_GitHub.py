@@ -56,13 +56,13 @@ def getFolderData(folder, parent, order, level):
   level += 1
   if level < depth:
     for f in os.scandir(folder):
-	if f.is_dir():
-          order += 1
-          if order <= width:
-            getFolderData(f, nID, order, level)
-            return true
-          else:
-            return false
+      if f.is_dir():
+        order += 1
+        if order <= width:
+          getFolderData(f, nID, order, level)
+          return true
+        else:
+          return false
 
 #-----------------  MAIN   -----------------------------
 
