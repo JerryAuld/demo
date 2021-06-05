@@ -27,7 +27,7 @@ def getLatestDate(folder):
   kids = 0
   files = [ file.path for file in os.scandir(folder) ]
   for f in files:
-    if file.is_dir():
+    if f.is_dir():
       kids += 1
     else:
       fcount += 1
