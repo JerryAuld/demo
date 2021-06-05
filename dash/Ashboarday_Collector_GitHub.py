@@ -48,9 +48,9 @@ def getFolderData(folder, parent, order, level):
   result = getLatestDate(folder)
 		
   # We must create this folder as a node on the dashboard before continuing, so we know the parent node ID for any children:
-  sFolderPath = urllib.parse.quote_plus(folder)
+  sFolderPath = urllib.parse.quote_plus(folder.path)
   sFolderName = urllib.parse.quote_plus(folder.name)
-  print("Sending "+sFolderName+" ("+sFolderPath+")")
+  print("Sending "+folder.name+" ("+folder.path+")")
   nID = urllib.request.urlopen(dashapi+"?p=" + str(parent) + "&n=" + sFolderPath +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + str(order) + "&k=" + str(result[3]) + "&s=GitHub&d=" + urllib.parse.quote_plus(result[0]) + "&z=" + str(result[2]) + "&i=" + sFolderName).read()
 		
   # If we are not at depth and up to our width, process the child folders of this folder:
