@@ -56,9 +56,8 @@ def getFolderData(folder, parent, order, level):
   sFolderPath = urllib.parse.quote_plus(folder.path)
   sFolderName = urllib.parse.quote_plus(folder.name)
   print("Sending "+folder.name+" ("+folder.path+")")
-  dashret = urllib.request.urlopen(dashapi+"&p=" + str(parent) + "&n=" + sFolderName +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + str(order) + "&k=" + str(result[3]) + "&s=GitHub&d=" + urllib.parse.quote_plus(result[0]) + "&z=" + str(result[2]) + "&i=" + sFolderPath).read().decode('latin1')
-  if dashret.isnumeric():
-    nID = dashret.text
+  nID = urllib.request.urlopen(dashapi+"&p=" + str(parent) + "&n=" + sFolderName +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + str(order) + "&k=" + str(result[3]) + "&s=GitHub&d=" + urllib.parse.quote_plus(result[0]) + "&z=" + str(result[2]) + "&i=" + sFolderPath).read().decode('latin1')
+  if nID.isnumeric():
     # If we are not at depth and up to our width, process the child folders of this folder:
     order = 0
     level += 1
@@ -72,7 +71,7 @@ def getFolderData(folder, parent, order, level):
           else:
             return False
   else:
-    print("API Error: "+str(dashret))
+    print("API Error: "+str(nID))
     
 #-----------------  MAIN   -----------------------------
 
