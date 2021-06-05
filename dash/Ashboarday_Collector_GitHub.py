@@ -72,7 +72,7 @@ def getFolderData(folder, parent, order, level):
           else:
             return false
   else:
-    print("API Error: "+nID)
+    print("API Error: "+str(dashret))
     
 #-----------------  MAIN   -----------------------------
 
