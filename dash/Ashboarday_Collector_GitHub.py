@@ -68,9 +68,9 @@ def getFolderData(folder, parent, order, level):
           order += 1
           if order <= width:
             getFolderData(f, nID, order, level)
-            return true
+            return True
           else:
-            return false
+            return False
   else:
     print("API Error: "+str(dashret))
     
