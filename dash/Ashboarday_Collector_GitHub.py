@@ -63,7 +63,7 @@ def getFolderData(folder, parent, order, level):
         if order <= width:
           if nID.isnumeric():
 	          getFolderData(f, nID, order, level)
-	        else:
+          else:
             print("API Error: "+nID)
           return true
         else:
