@@ -61,7 +61,7 @@ def getFolderData(folder, parent, order, level):
     # If we are not at depth and up to our width, process the child folders of this folder:
     order = 0
     level += 1
-    if level < depth:
+    if level <= depth:
       for f in os.scandir(folder):
         if f.is_dir():
           order += 1
