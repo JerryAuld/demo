@@ -41,6 +41,11 @@ def getLatestDate(folder):
   else:
     return latedate.strftime("%Y-%m-%d"), fcount, fsize, kids
 	
+def bytes_to_int(bytes):
+  result = 0
+  for b in bytes:
+    result = result * 256 + int(b)
+  return result
 	
 def getFolderData(folder, parent, order, level):
 		
@@ -51,8 +56,9 @@ def getFolderData(folder, parent, order, level):
   sFolderPath = urllib.parse.quote_plus(folder.path)
   sFolderName = urllib.parse.quote_plus(folder.name)
   print("Sending "+folder.name+" ("+folder.path+")")
-  nID = urllib.request.urlopen(dashapi+"&p=" + str(parent) + "&n=" + sFolderPath +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + str(order) + "&k=" + str(result[3]) + "&s=GitHub&d=" + urllib.parse.quote_plus(result[0]) + "&z=" + str(result[2]) + "&i=" + sFolderName).read()
-		
+  dashret = urllib.request.urlopen(dashapi+"&p=" + str(parent) + "&n=" + sFolderPath +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + str(order) + "&k=" + str(result[3]) + "&s=GitHub&d=" + urllib.parse.quote_plus(result[0]) + "&z=" + str(result[2]) + "&i=" + sFolderName).read()
+	nID = bytes_to_int(dashret)
+  
   # If we are not at depth and up to our width, process the child folders of this folder:
   order = 0
   level += 1
