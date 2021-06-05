@@ -27,8 +27,8 @@ def getLatestDate(folder):
   kids = 0
   files = [ file.path for file in os.scandir(folder) ]
   for f in files:
-	if file.is_dir():
-		kids += 1
+  if file.is_dir():
+    kids += 1
 	else:
 		fcount += 1
 		(mode, ino, dev, nlink, uid, gid, size, atime, mtime, ctime) = os.stat(f)
@@ -45,23 +45,23 @@ def getLatestDate(folder):
 	
 def getFolderData(folder, parent, order, level);
 
-	if folder.is_dir():
+  if folder.is_dir():
 		
 		# Get the folder data:
-		result = getLatestDate(folder)
+    result = getLatestDate(folder)
 		
 		# We must create this folder as a node on the dashboard before continuing, so we know the parent node ID for any children:
-		nID = urllib.request.urlopen(dashapi+"?p=" + parent + "&n=" + urllib.parse.quote_plus(folder) +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + order + "&k=" + result[3] + "&s=GitHub&d=" + urllib.parse.quote_plus(result[0]) + "&z=" + str(result[2]) + "&i=" + urllib.parse.quote_plus(folder)).read()
+    nID = urllib.request.urlopen(dashapi+"?p=" + parent + "&n=" + urllib.parse.quote_plus(folder) +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + order + "&k=" + result[3] + "&s=GitHub&d=" + urllib.parse.quote_plus(result[0]) + "&z=" + str(result[2]) + "&i=" + urllib.parse.quote_plus(folder)).read()
 		
 		# If we are not at depth and up to our width, process the child folders of this folder:
 		subfolders = [ f.path for f in os.scandir(folder) if f.is_dir() ]
 		iOrder = 0
 		level += 1
-		if level < depth:
-			for f in subfolders:
-				if f.is_dir():
+    if level < depth:
+      for f in subfolders:
+        if f.is_dir():
 					iOrder += 1
-					if iOrder <= width:
+          if iOrder <= width:
 						getFolderData(folder."/".f, nID, $iOrder, level)
 		
 		return true
@@ -74,7 +74,6 @@ def getFolderData(folder, parent, order, level);
 print("Python :: Running the Ashboarday Collector.")
 
 # Get our guidance file:
-print(os.getcwd())
 if os.path.exists('dash/ashboarday.c.json'):
   
   with open('dash/ashboarday.c.json') as f:
@@ -95,7 +94,7 @@ if os.path.exists('dash/ashboarday.c.json'):
 	iOrder = 0
 	
 	for f in subfolders:
-		if f.is_dir():
+    if f.is_dir():
 			iOrder += 1
 			getFolderData(root."/".f, 0, $iOrder, 1)
 	
