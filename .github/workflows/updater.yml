@@ -33,7 +33,7 @@ jobs:
         run: echo Starting the Ashboarday Update
         
       - name: execute py script
-        run: python dash/ashboarday_github_updater.py
+        run: python dash/Ashboarday_Updater_GitHub.py
         env:  
           ash_path: 'dash/'
           
