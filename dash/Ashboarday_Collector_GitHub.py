@@ -69,7 +69,10 @@ def getFolderData(folder, parent, order, level):
             getFolderData(f, nID, order, level)
             return True
           else:
+            print("  - Past Width: ("+str(order)+") "+f.name)
             return False
+        else:
+          print("  - Ignore "+f.name)
   else:
     print("API Error: "+str(nID))
     
