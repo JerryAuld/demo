@@ -43,7 +43,7 @@ def getLatestDate(folder):
     return latedate.strftime("%Y-%m-%d"), fcount, fsize, kids
 	
 	
-def getFolderData(folder, parent, order, level);
+def getFolderData(folder, parent, order, level):
 
   if folder.is_dir():
 		
