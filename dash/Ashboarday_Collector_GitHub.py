@@ -62,7 +62,7 @@ def getFolderData(folder, parent, order, level):
         if f.is_dir():
           iOrder += 1
           if iOrder <= width:
-            getFolderData(folder+"/"+f, nID, $iOrder, level)
+            getFolderData(folder+"/"+f, nID, iOrder, level)
             return true
           else:
             return false
@@ -94,7 +94,7 @@ if os.path.exists('dash/ashboarday.c.json'):
     for f in subfolders:
       if f.is_dir():
         iOrder += 1
-        getFolderData(root+"/"+f, 0, $iOrder, 1)
+        getFolderData(root+"/"+f, 0, iOrder, 1)
         print("SUCCESS: processing complete.")
 	
   else:
