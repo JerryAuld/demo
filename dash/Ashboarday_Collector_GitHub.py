@@ -55,13 +55,14 @@ def getFolderData(folder, parent, order, level):
   order = 0
   level += 1
   if level < depth:
-    for f in os.scandir(folder) if f.is_dir():
-      order += 1
-      if order <= width:
-        getFolderData(f, nID, order, level)
-        return true
-      else:
-        return false
+    for f in os.scandir(folder):
+	if f.is_dir():
+          order += 1
+          if order <= width:
+            getFolderData(f, nID, order, level)
+            return true
+          else:
+            return false
 
 #-----------------  MAIN   -----------------------------
 
@@ -82,9 +83,10 @@ if os.path.exists('dash/ashboarday.c.json'):
 	
   # Get all subdirectories in the current directory:
   iOrder = 0
-  for f in os.scandir(root) if f.is_dir():
-    iOrder += 1
-    getFolderData(f, 0, iOrder, 1)
+  for f in os.scandir(root):
+    if f.is_dir():
+      iOrder += 1
+      getFolderData(f, 0, iOrder, 1)
       
   print("SUCCESS: processing complete.")
 
