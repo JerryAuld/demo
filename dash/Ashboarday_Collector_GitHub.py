@@ -83,22 +83,18 @@ if os.path.exists('dash/ashboarday.c.json'):
   depth = jsondata['Depth']
 
   f.close
+	
+  # Get all subdirectories in the current directory:
+  subfolders = [ f.path for f in os.scandir(root) if f.is_dir() ]
+  iOrder = 0
 
-  # Position ourselves at the start folder. We do not collect this folder, just its children.
-  if root.is_dir():
-	
-    # Get all subdirectories in the current directory:
-    subfolders = [ f.path for f in os.scandir(root) if f.is_dir() ]
-    iOrder = 0
-	
-    for f in subfolders:
-      if f.is_dir():
-        iOrder += 1
-        getFolderData(root+"/"+f, 0, iOrder, 1)
-        print("SUCCESS: processing complete.")
-	
-  else:
-    print("ERROR: specified root is not a directory.")
+  for f in subfolders:
+    if f.is_dir():
+      iOrder += 1
+      getFolderData(root+"/"+f, 0, iOrder, 1)
+      
+  print("SUCCESS: processing complete.")
+
 else:
   print("ERROR: json guidance file is not found. Please place in the same folder as this script.")
 
