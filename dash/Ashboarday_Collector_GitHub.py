@@ -78,8 +78,8 @@ if os.path.exists('dash/ashboarday.c.json'):
 
   dashapi = jsondata['Target']  # License is defined within this URL.
   root = "./"  # jsondata['Start']
-  width = jsondata['Width']
-  depth = jsondata['Depth']
+  width = 99 #jsondata['Width']
+  depth = 4 #jsondata['Depth']
 
   f.close
 	
