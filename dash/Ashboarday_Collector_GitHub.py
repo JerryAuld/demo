@@ -57,24 +57,23 @@ def getFolderData(folder, parent, order, level):
   sFolderName = urllib.parse.quote_plus(folder.name)
   print("Sending "+folder.name+" ("+folder.path+")")
   dashret = urllib.request.urlopen(dashapi+"&p=" + str(parent) + "&n=" + sFolderPath +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + str(order) + "&k=" + str(result[3]) + "&s=GitHub&d=" + urllib.parse.quote_plus(result[0]) + "&z=" + str(result[2]) + "&i=" + sFolderName).read()
-  nID = bytes_to_int(dashret)
-  
-  # If we are not at depth and up to our width, process the child folders of this folder:
-  order = 0
-  level += 1
-  if level < depth:
-    for f in os.scandir(folder):
-      if f.is_dir():
-        order += 1
-        if order <= width:
-          if nID.isnumeric():
-	          getFolderData(f, nID, order, level)
+  if str(dashret).isnumeric():
+    nID = bytes_to_int(dashret)
+    # If we are not at depth and up to our width, process the child folders of this folder:
+    order = 0
+    level += 1
+    if level < depth:
+      for f in os.scandir(folder):
+        if f.is_dir():
+          order += 1
+          if order <= width:
+            getFolderData(f, nID, order, level)
+            return true
           else:
-            print("API Error: "+nID)
-          return true
-        else:
-          return false
-
+            return false
+  else:
+    print("API Error: "+nID)
+    
 #-----------------  MAIN   -----------------------------
 
 print("Python :: Running the Ashboarday Collector.")
