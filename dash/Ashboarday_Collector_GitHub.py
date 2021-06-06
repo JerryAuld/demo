@@ -67,10 +67,8 @@ def getFolderData(folder, parent, order, level):
           order += 1
           if order <= width:
             getFolderData(f, nID, order, level)
-            return True
           else:
             print("  - Past Width: ("+str(order)+") "+f.name)
-            return False
         else:
           print("  - Ignore "+f.name)
   else:
