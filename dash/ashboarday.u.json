@@ -2,5 +2,68 @@
   "License": "20201116",
   "Target": "https://otago.ca/apps/dash/x/get_data.php",
   "Nodes": [
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,  ]
+	  { "NID": "918", "Scrape": "./external" }
+,	  { "NID": "919", "Scrape": "./external/applications" }
+,	  { "NID": "920", "Scrape": "./external/applications/suppliers" }
+,	  { "NID": "921", "Scrape": "./external/applications/suppliers/support" }
+,	  { "NID": "922", "Scrape": "./external/applications/suppliers/build guide" }
+,	  { "NID": "923", "Scrape": "./external/applications/suppliers/run book" }
+,	  { "NID": "924", "Scrape": "./external/applications/suppliers/overview" }
+,	  { "NID": "925", "Scrape": "./external/applications/contracts" }
+,	  { "NID": "926", "Scrape": "./external/applications/contracts/support" }
+,	  { "NID": "927", "Scrape": "./external/applications/contracts/build guide" }
+,	  { "NID": "928", "Scrape": "./external/applications/contracts/run book" }
+,	  { "NID": "929", "Scrape": "./external/applications/contracts/overview" }
+,	  { "NID": "930", "Scrape": "./external/applications/invoices" }
+,	  { "NID": "931", "Scrape": "./external/applications/invoices/support" }
+,	  { "NID": "932", "Scrape": "./external/applications/invoices/build guide" }
+,	  { "NID": "933", "Scrape": "./external/applications/invoices/run book" }
+,	  { "NID": "934", "Scrape": "./external/applications/invoices/overview" }
+,	  { "NID": "935", "Scrape": "./external/networks" }
+,	  { "NID": "936", "Scrape": "./external/networks/accounts" }
+,	  { "NID": "937", "Scrape": "./external/networks/accounts/support" }
+,	  { "NID": "938", "Scrape": "./external/networks/accounts/build guide" }
+,	  { "NID": "939", "Scrape": "./external/networks/accounts/run book" }
+,	  { "NID": "940", "Scrape": "./external/networks/accounts/overview" }
+,	  { "NID": "941", "Scrape": "./external/networks/dmz" }
+,	  { "NID": "942", "Scrape": "./external/networks/dmz/support" }
+,	  { "NID": "943", "Scrape": "./external/networks/dmz/build guide" }
+,	  { "NID": "944", "Scrape": "./external/networks/dmz/run book" }
+,	  { "NID": "945", "Scrape": "./external/networks/dmz/overview" }
+,	  { "NID": "946", "Scrape": "./testing" }
+,	  { "NID": "947", "Scrape": "./testing/networks" }
+,	  { "NID": "948", "Scrape": "./testing/networks/rulesets" }
+,	  { "NID": "949", "Scrape": "./testing/networks/rulesets/support" }
+,	  { "NID": "950", "Scrape": "./testing/networks/rulesets/build guide" }
+,	  { "NID": "951", "Scrape": "./testing/networks/rulesets/run book" }
+,	  { "NID": "952", "Scrape": "./testing/networks/rulesets/overview" }
+,	  { "NID": "953", "Scrape": "./production" }
+,	  { "NID": "954", "Scrape": "./production/applications" }
+,	  { "NID": "955", "Scrape": "./production/applications/scheduling" }
+,	  { "NID": "956", "Scrape": "./production/applications/scheduling/support" }
+,	  { "NID": "957", "Scrape": "./production/applications/scheduling/build guide" }
+,	  { "NID": "958", "Scrape": "./production/applications/scheduling/run book" }
+,	  { "NID": "959", "Scrape": "./production/applications/scheduling/overview" }
+,	  { "NID": "960", "Scrape": "./production/applications/partners" }
+,	  { "NID": "961", "Scrape": "./production/applications/partners/support" }
+,	  { "NID": "962", "Scrape": "./production/applications/partners/build guide" }
+,	  { "NID": "963", "Scrape": "./production/applications/partners/run book" }
+,	  { "NID": "964", "Scrape": "./production/applications/partners/overview" }
+,	  { "NID": "965", "Scrape": "./production/applications/sap" }
+,	  { "NID": "966", "Scrape": "./production/applications/sap/support" }
+,	  { "NID": "967", "Scrape": "./production/applications/sap/build guide" }
+,	  { "NID": "968", "Scrape": "./production/applications/sap/run book" }
+,	  { "NID": "969", "Scrape": "./production/applications/sap/overview" }
+,	  { "NID": "970", "Scrape": "./production/networks" }
+,	  { "NID": "971", "Scrape": "./production/networks/rulesets" }
+,	  { "NID": "972", "Scrape": "./production/networks/rulesets/support" }
+,	  { "NID": "973", "Scrape": "./production/networks/rulesets/build guide" }
+,	  { "NID": "974", "Scrape": "./production/networks/rulesets/run book" }
+,	  { "NID": "975", "Scrape": "./production/networks/rulesets/overview" }
+,	  { "NID": "976", "Scrape": "./production/networks/servers" }
+,	  { "NID": "977", "Scrape": "./production/networks/servers/support" }
+,	  { "NID": "978", "Scrape": "./production/networks/servers/build guide" }
+,	  { "NID": "979", "Scrape": "./production/networks/servers/run book" }
+,	  { "NID": "980", "Scrape": "./production/networks/servers/overview" }
+  ]
 }
