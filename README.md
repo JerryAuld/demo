@@ -1,4 +1,5 @@
-[![Ashboarday-Updater](https://github.com/JerryAuld/ashboarday/actions/workflows/test1.yml/badge.svg)](https://github.com/JerryAuld/ashboarday/actions/workflows/test1.yml)
+[![Ashboarday-Updater](https://github.com/JerryAuld/ashboarday/actions/workflows/updater.yml/badge.svg)](https://github.com/JerryAuld/ashboarday/actions/workflows/updater.yml)
+[![Ashboarday-Collector](https://github.com/JerryAuld/ashboarday/actions/workflows/collector.yml/badge.svg)](https://github.com/JerryAuld/ashboarday/actions/workflows/collector.yml)
 
 # ashboarday
 Example repo for ashboarday agents.
