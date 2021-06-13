@@ -87,13 +87,14 @@ if os.path.exists('dash/ashboarday.c.json'):
     jsondata = json.load(f)
 
   dashapi = jsondata['Target']  # License is defined within this URL.
-  root = "./"  # jsondata['Start']
-  width = 99 #jsondata['Width']
-  depth = 4 #jsondata['Depth']
+  root = jsondata['Start']
+  width = int(jsondata['Width'])
+  depth = int(jsondata['Depth'])
 
   f.close
 	
   # Get all subdirectories in the current directory:
+  if(root == "") root = "./"
   iOrder = 0
   for f in os.scandir(root):
     if f.is_dir():
