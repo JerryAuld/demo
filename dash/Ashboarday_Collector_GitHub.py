@@ -94,7 +94,8 @@ if os.path.exists('dash/ashboarday.c.json'):
   f.close
 	
   # Get all subdirectories in the current directory:
-  if(root == "") root = "./"
+  if(root == "")
+    root = "./"
   iOrder = 0
   for f in os.scandir(root):
     if f.is_dir():
