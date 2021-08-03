@@ -50,7 +50,6 @@ if os.path.exists('dash/ashboarday.u.json'):
   with open('dash/ashboarday.u.json') as f:
     jsondata = json.load(f)
 
-  license = jsondata['License']
   dashapi = jsondata['Target']
   nodes = jsondata['Nodes']
   
