@@ -30,7 +30,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       
       - name: Signal the start
-        run: echo Starting the Ashboarday Update
+        run: echo Starting the Ashboarday Updater
         
       - name: execute py script
         run: python dash/Ashboarday_Updater_GitHub.py
