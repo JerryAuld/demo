@@ -53,8 +53,7 @@ def getFolderData(folder, parent, order, level, root):
   result = getLatestDate(folder)
 		
   # We must create this folder as a node on the dashboard before continuing, so we know the parent node ID for any children:
-  sFolderPath = urllib.parse.quote_plus(folder.path)
-  sFolderPath = sFolderPath[len(root):] # remove the "root" path as specified by the guidance file.
+  sFolderPath = urllib.parse.quote_plus(folder.path[len(root):]) # remove the "root" path as specified by the guidance file.
   sFolderName = urllib.parse.quote_plus(folder.name)
   print("Sending "+folder.name+" ("+folder.path+")")
   nID = urllib.request.urlopen(dashapi+"&p=" + str(parent) + "&m=" + sFolderName +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + str(order) + "&k=" + str(result[3]) + "&y=GitHub&t=" + urllib.parse.quote_plus(result[0]) + "&s=" + str(result[2]) + "&i=" + sFolderPath).read().decode('latin1')
@@ -95,6 +94,7 @@ if os.path.exists('.dash/ashboarday.c.json'):
   # Get all subdirectories in the current directory:
   if(root == ""):
     root = "./"
+	print(str(len(root)) + " is the length of root")
   iOrder = 0
   for f in os.scandir(root):
     if f.is_dir() and f.name[0] != ".":
