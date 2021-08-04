@@ -47,7 +47,7 @@ def bytes_to_int(bytes):
     result = result * 256 + int(b)
   return result
 	
-def getFolderData(folder, parent, order, level):
+def getFolderData(folder, parent, order, level, root):
 		
   # Get the folder data:
   result = getLatestDate(folder)
@@ -67,7 +67,7 @@ def getFolderData(folder, parent, order, level):
         if f.is_dir():
           order += 1
           if order <= width:
-            getFolderData(f, nID, order, level)
+            getFolderData(f, nID, order, level, root)
           else:
             print("  - Past Width: ("+str(order)+") "+f.name)
         else:
@@ -99,7 +99,7 @@ if os.path.exists('.dash/ashboarday.c.json'):
   for f in os.scandir(root):
     if f.is_dir() and f.name[0] != ".":
       iOrder += 1
-      getFolderData(f, 0, iOrder, 1)
+      getFolderData(f, 0, iOrder, 1, root)
       
   print("SUCCESS: processing complete.")
 
