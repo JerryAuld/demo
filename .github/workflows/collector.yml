@@ -32,7 +32,7 @@ jobs:
       - name: execute py script
         run: python .dash/Ashboarday_Collector_GitHub.py
         env:  
-          ash_path: 'dash/'
+          ash_path: '.dash/'
           
       - name: report status
         run: echo "This job's status is ${{ job.status }}."
