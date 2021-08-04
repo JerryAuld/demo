@@ -30,7 +30,7 @@ jobs:
         run: echo Starting the Ashboarday Collector
         
       - name: execute py script
-        run: python dash/Ashboarday_Collector_GitHub.py
+        run: python .dash/Ashboarday_Collector_GitHub.py
         env:  
           ash_path: 'dash/'
           
