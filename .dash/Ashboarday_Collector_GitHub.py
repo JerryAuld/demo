@@ -54,6 +54,7 @@ def getFolderData(folder, parent, order, level):
 		
   # We must create this folder as a node on the dashboard before continuing, so we know the parent node ID for any children:
   sFolderPath = urllib.parse.quote_plus(folder.path)
+  sFolderPath.removeprefix(root)
   sFolderName = urllib.parse.quote_plus(folder.name)
   print("Sending "+folder.name+" ("+folder.path+")")
   nID = urllib.request.urlopen(dashapi+"&p=" + str(parent) + "&m=" + sFolderName +"&f=" + str(result[1]) + "&l=" + str(level) + "&o=" + str(order) + "&k=" + str(result[3]) + "&y=GitHub&t=" + urllib.parse.quote_plus(result[0]) + "&s=" + str(result[2]) + "&i=" + sFolderPath).read().decode('latin1')
