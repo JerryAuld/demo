@@ -79,9 +79,9 @@ def getFolderData(folder, parent, order, level):
 print("Python :: Running the Ashboarday Collector.")
 
 # Get our guidance file:
-if os.path.exists('dash/ashboarday.c.json'):
+if os.path.exists('.dash/ashboarday.c.json'):
   
-  with open('dash/ashboarday.c.json') as f:
+  with open('.dash/ashboarday.c.json') as f:
     jsondata = json.load(f)
 
   dashapi = jsondata['Target']  # License is defined within this URL.
