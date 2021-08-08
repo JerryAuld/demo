@@ -52,7 +52,7 @@ if os.path.exists('.dash/ashboarday.u.json'):
 
   dashapi = jsondata['Target']
   nodes = jsondata['Nodes']
-  print("Base URL: "+dashpi)
+  print("Base URL: "+dashapi)
   
   for node in nodes:
     result = getLatestDate(node['Scrape'])
