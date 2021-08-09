@@ -1,0 +1,68 @@
+{
+  "Target": "https://ashboarday.com/x/api.php?a=u&b=111&c=20201116",
+  "Nodes": [
+	  { "NID": "11002", "Scrape": "production" }
+,	  { "NID": "11003", "Scrape": "production/networks" }
+,	  { "NID": "11004", "Scrape": "production/networks/rulesets" }
+,	  { "NID": "11005", "Scrape": "production/networks/rulesets/run book" }
+,	  { "NID": "11006", "Scrape": "production/networks/rulesets/build guide" }
+,	  { "NID": "11007", "Scrape": "production/networks/rulesets/support" }
+,	  { "NID": "11008", "Scrape": "production/networks/rulesets/overview" }
+,	  { "NID": "11009", "Scrape": "production/networks/servers" }
+,	  { "NID": "11010", "Scrape": "production/networks/servers/run book" }
+,	  { "NID": "11011", "Scrape": "production/networks/servers/build guide" }
+,	  { "NID": "11012", "Scrape": "production/networks/servers/support" }
+,	  { "NID": "11013", "Scrape": "production/networks/servers/overview" }
+,	  { "NID": "11014", "Scrape": "production/applications" }
+,	  { "NID": "11015", "Scrape": "production/applications/partners" }
+,	  { "NID": "11016", "Scrape": "production/applications/partners/run book" }
+,	  { "NID": "11017", "Scrape": "production/applications/partners/build guide" }
+,	  { "NID": "11018", "Scrape": "production/applications/partners/support" }
+,	  { "NID": "11019", "Scrape": "production/applications/partners/overview" }
+,	  { "NID": "11020", "Scrape": "production/applications/scheduling" }
+,	  { "NID": "11021", "Scrape": "production/applications/scheduling/run book" }
+,	  { "NID": "11022", "Scrape": "production/applications/scheduling/build guide" }
+,	  { "NID": "11023", "Scrape": "production/applications/scheduling/support" }
+,	  { "NID": "11024", "Scrape": "production/applications/scheduling/overview" }
+,	  { "NID": "11025", "Scrape": "production/applications/sap" }
+,	  { "NID": "11026", "Scrape": "production/applications/sap/run book" }
+,	  { "NID": "11027", "Scrape": "production/applications/sap/build guide" }
+,	  { "NID": "11028", "Scrape": "production/applications/sap/support" }
+,	  { "NID": "11029", "Scrape": "production/applications/sap/overview" }
+,	  { "NID": "11030", "Scrape": "testing" }
+,	  { "NID": "11031", "Scrape": "testing/networks" }
+,	  { "NID": "11032", "Scrape": "testing/networks/rulesets" }
+,	  { "NID": "11033", "Scrape": "testing/networks/rulesets/run book" }
+,	  { "NID": "11034", "Scrape": "testing/networks/rulesets/build guide" }
+,	  { "NID": "11035", "Scrape": "testing/networks/rulesets/support" }
+,	  { "NID": "11036", "Scrape": "testing/networks/rulesets/overview" }
+,	  { "NID": "11037", "Scrape": "external" }
+,	  { "NID": "11038", "Scrape": "external/networks" }
+,	  { "NID": "11039", "Scrape": "external/networks/accounts" }
+,	  { "NID": "11040", "Scrape": "external/networks/accounts/run book" }
+,	  { "NID": "11041", "Scrape": "external/networks/accounts/build guide" }
+,	  { "NID": "11042", "Scrape": "external/networks/accounts/support" }
+,	  { "NID": "11043", "Scrape": "external/networks/accounts/overview" }
+,	  { "NID": "11044", "Scrape": "external/networks/dmz" }
+,	  { "NID": "11045", "Scrape": "external/networks/dmz/run book" }
+,	  { "NID": "11046", "Scrape": "external/networks/dmz/build guide" }
+,	  { "NID": "11047", "Scrape": "external/networks/dmz/support" }
+,	  { "NID": "11048", "Scrape": "external/networks/dmz/overview" }
+,	  { "NID": "11049", "Scrape": "external/applications" }
+,	  { "NID": "11050", "Scrape": "external/applications/contracts" }
+,	  { "NID": "11051", "Scrape": "external/applications/contracts/run book" }
+,	  { "NID": "11052", "Scrape": "external/applications/contracts/build guide" }
+,	  { "NID": "11053", "Scrape": "external/applications/contracts/support" }
+,	  { "NID": "11054", "Scrape": "external/applications/contracts/overview" }
+,	  { "NID": "11055", "Scrape": "external/applications/invoices" }
+,	  { "NID": "11056", "Scrape": "external/applications/invoices/run book" }
+,	  { "NID": "11057", "Scrape": "external/applications/invoices/build guide" }
+,	  { "NID": "11058", "Scrape": "external/applications/invoices/support" }
+,	  { "NID": "11059", "Scrape": "external/applications/invoices/overview" }
+,	  { "NID": "11060", "Scrape": "external/applications/suppliers" }
+,	  { "NID": "11061", "Scrape": "external/applications/suppliers/run book" }
+,	  { "NID": "11062", "Scrape": "external/applications/suppliers/build guide" }
+,	  { "NID": "11063", "Scrape": "external/applications/suppliers/support" }
+,	  { "NID": "11064", "Scrape": "external/applications/suppliers/overview" }
+  ]
+}
