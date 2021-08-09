@@ -1,0 +1,38 @@
+# Collector workflow
+
+name: Ashboarday-Collector
+
+# Controls when the action will run. Collectors should only be run manually.
+on:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Workflow runs:
+jobs:
+  collector:
+    runs-on: ubuntu-latest  # Tell GitHub to use a fresh Linux virtual machine to run this workflow
+    steps:
+      # Check-out the repository to the virtual machine so it can analyze it:
+      - uses: actions/checkout@v2
+      
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.7.7' # install the python version needed
+          
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      
+      - name: Signal the start
+        run: echo Starting the Ashboarday Collector
+        
+      - name: execute py script
+        run: python .dash/Ashboarday_Collector_GitHub.py
+        env:  
+          ash_path: '.dash/'
+          
+      - name: report status
+        run: echo "This job's status is ${{ job.status }}."
