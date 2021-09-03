@@ -30,7 +30,7 @@ jobs:
         run: echo Starting the Ashboarday Generator
         
       - name: execute py script
-        run: python .dash/Ashboarday_Generatorr_GitHub.py
+        run: python .dash/Ashboarday_Generator_GitHub.py
         env:  
           ash_path: '.dash/'
           
