@@ -54,6 +54,7 @@ if os.path.exists('.dash/ashboarday.g.json'):
 
   dash = jsondata['Target']  # License is defined within this URL. We don't actually need this when generating.
   nodes = jsondata['Nodes']
+  print(nodes)
 
   f.close
 	
