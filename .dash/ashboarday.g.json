@@ -1,0 +1,68 @@
+{
+  "Target": "https://ashboarday.com/x/api.php?a=g&b=&c=20201116&d=12",
+  "Nodes": [
+	  { "NID": "11002", "PID": "0", "Name": "production" }
+,	  { "NID": "11030", "PID": "0", "Name": "testing" }
+,	  { "NID": "11037", "PID": "0", "Name": "external" }
+,	  { "NID": "11003", "PID": "11002", "Name": "networks" }
+,	  { "NID": "11014", "PID": "11002", "Name": "applications" }
+,	  { "NID": "11004", "PID": "11003", "Name": "rulesets" }
+,	  { "NID": "11009", "PID": "11003", "Name": "servers" }
+,	  { "NID": "11008", "PID": "11004", "Name": "overview" }
+,	  { "NID": "11006", "PID": "11004", "Name": "build guide" }
+,	  { "NID": "11005", "PID": "11004", "Name": "run book" }
+,	  { "NID": "11007", "PID": "11004", "Name": "support" }
+,	  { "NID": "11010", "PID": "11009", "Name": "run book" }
+,	  { "NID": "11011", "PID": "11009", "Name": "build guide" }
+,	  { "NID": "11012", "PID": "11009", "Name": "support" }
+,	  { "NID": "11013", "PID": "11009", "Name": "overview" }
+,	  { "NID": "11015", "PID": "11014", "Name": "partners" }
+,	  { "NID": "11020", "PID": "11014", "Name": "scheduling" }
+,	  { "NID": "11025", "PID": "11014", "Name": "sap" }
+,	  { "NID": "11016", "PID": "11015", "Name": "run book" }
+,	  { "NID": "11017", "PID": "11015", "Name": "build guide" }
+,	  { "NID": "11018", "PID": "11015", "Name": "support" }
+,	  { "NID": "11019", "PID": "11015", "Name": "overview" }
+,	  { "NID": "11021", "PID": "11020", "Name": "run book" }
+,	  { "NID": "11022", "PID": "11020", "Name": "build guide" }
+,	  { "NID": "11023", "PID": "11020", "Name": "support" }
+,	  { "NID": "11024", "PID": "11020", "Name": "overview" }
+,	  { "NID": "11026", "PID": "11025", "Name": "run book" }
+,	  { "NID": "11027", "PID": "11025", "Name": "build guide" }
+,	  { "NID": "11028", "PID": "11025", "Name": "support" }
+,	  { "NID": "11029", "PID": "11025", "Name": "overview" }
+,	  { "NID": "11031", "PID": "11030", "Name": "networks" }
+,	  { "NID": "11032", "PID": "11031", "Name": "rulesets" }
+,	  { "NID": "11033", "PID": "11032", "Name": "run book" }
+,	  { "NID": "11034", "PID": "11032", "Name": "build guide" }
+,	  { "NID": "11035", "PID": "11032", "Name": "support" }
+,	  { "NID": "11036", "PID": "11032", "Name": "overview" }
+,	  { "NID": "11038", "PID": "11037", "Name": "networks" }
+,	  { "NID": "11049", "PID": "11037", "Name": "applications" }
+,	  { "NID": "11039", "PID": "11038", "Name": "accounts" }
+,	  { "NID": "11044", "PID": "11038", "Name": "dmz" }
+,	  { "NID": "11040", "PID": "11039", "Name": "run book" }
+,	  { "NID": "11041", "PID": "11039", "Name": "build guide" }
+,	  { "NID": "11042", "PID": "11039", "Name": "support" }
+,	  { "NID": "11043", "PID": "11039", "Name": "overview" }
+,	  { "NID": "11045", "PID": "11044", "Name": "run book" }
+,	  { "NID": "11046", "PID": "11044", "Name": "build guide" }
+,	  { "NID": "11047", "PID": "11044", "Name": "support" }
+,	  { "NID": "11048", "PID": "11044", "Name": "overview" }
+,	  { "NID": "11050", "PID": "11049", "Name": "contracts" }
+,	  { "NID": "11055", "PID": "11049", "Name": "invoices" }
+,	  { "NID": "11060", "PID": "11049", "Name": "suppliers" }
+,	  { "NID": "11051", "PID": "11050", "Name": "run book" }
+,	  { "NID": "11052", "PID": "11050", "Name": "build guide" }
+,	  { "NID": "11053", "PID": "11050", "Name": "support" }
+,	  { "NID": "11054", "PID": "11050", "Name": "overview" }
+,	  { "NID": "11056", "PID": "11055", "Name": "run book" }
+,	  { "NID": "11057", "PID": "11055", "Name": "build guide" }
+,	  { "NID": "11058", "PID": "11055", "Name": "support" }
+,	  { "NID": "11059", "PID": "11055", "Name": "overview" }
+,	  { "NID": "11061", "PID": "11060", "Name": "run book" }
+,	  { "NID": "11062", "PID": "11060", "Name": "build guide" }
+,	  { "NID": "11063", "PID": "11060", "Name": "support" }
+,	  { "NID": "11064", "PID": "11060", "Name": "overview" }
+  ]
+}
