@@ -40,7 +40,7 @@ def createFolder(fID,folder):
   # Recurse for any child folders:
   for n in nodes:
     if n[1] == fID:
-	  createFolder(n[0],folder+"/"+n[2])
+      createFolder(n[0],folder+"/"+n[2])
     
 #-----------------  MAIN   -----------------------------
 
