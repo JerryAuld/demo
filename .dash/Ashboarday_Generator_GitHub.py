@@ -39,8 +39,8 @@ def createFolder(fID,folder):
   
   # Recurse for any child folders:
   for n in nodes:
-    if n[1] == fID:
-      createFolder(n[0],folder+"/"+n[2])
+    if n[PID] == fID:
+      createFolder(n[NID],folder+"/"+n[Name])
     
 #-----------------  MAIN   -----------------------------
 
@@ -61,8 +61,8 @@ if os.path.exists('.dash/ashboarday.g.json'):
   # We create from the root directory.
   # Create all directories that have no parent, and recurse down for each.
   for n in nodes:
-    if n[1] == 0:
-      createFolder(n[0],n[2])	
+    if n[PID] == 0:
+      createFolder(n[NID],n[Name])	
   
   print("Set git config...")
   subprocess.Popen(["git", "config", "--global", "user.name", "github-actions[bot]"])
